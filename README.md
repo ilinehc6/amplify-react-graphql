@@ -1,4 +1,4 @@
-# React + Vite AWS Amplify + GraphQL + DynamoDB
+# React + Vite + AWS Amplify + GraphQL + DynamoDB
 
 - React web application working in Vite with HMR and some ESLint rules
 - Deployed using AWS Amplify
