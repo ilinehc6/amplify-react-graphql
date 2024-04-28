@@ -1,15 +1,26 @@
 import viteLogo from '/vite.svg'
-import './App.css'
+// import './App.css'
+import "@aws-amplify/ui-react/styles.css";
+import {
+  withAuthenticator,
+  Button,
+  Heading,
+  Image,
+  View,
+  Card,
+} from "@aws-amplify/ui-react";
 
-function App() {
+function App({ signOut }) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={viteLogo} className="App-logo" alt="logo" />
-        <h1>Hello from Ilinehc</h1>
-      </header>
-    </div>
+    <View className="App">
+      <Card>
+        <Image src={viteLogo} className="App-logo" alt="logo" />
+        <Heading level={1}>We now have Auth!</Heading>
+      </Card>
+      <Button onClick={signOut}>Sign Out</Button>
+    </View>
   );
 }
 
-export default App
+export default withAuthenticator(App);
+
